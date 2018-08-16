@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   changeColor = setInterval(() => {
-    let random = Math.floor(Math.random()*32)
+    let random = Math.floor(Math.random() * this.props.allColors.length)
     let colors = [...this.props.allColors]
     let newColor = colors[random]
     this.setState({
@@ -20,7 +20,7 @@ class App extends Component {
   }, 300 )
   
   backColor = () => {
-    let random = Math.floor(Math.random()*32);
+    let random = Math.floor(Math.random()* this.props.allColors.length);
     let colors = [...this.props.allColors];
     return colors[random]
   }
