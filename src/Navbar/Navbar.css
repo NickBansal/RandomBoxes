@@ -1,0 +1,9 @@
+.Navbar h1 {
+	background: beige;
+    margin: 0;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+   

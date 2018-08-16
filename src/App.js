@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Boxes from './Boxes/Boxes'
+import Boxes from './Boxes/Boxes';
+import Navbar from './Navbar/Navbar'
 
 const boxes = Array(32)
 
@@ -28,6 +29,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <Navbar />
         <Boxes box={boxes} boxColor={this.state.background} backColor={this.backColor}/>
       </div>
     );

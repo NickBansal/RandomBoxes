@@ -15,10 +15,8 @@ class Boxes extends Component {
 		const randBox = Math.floor(Math.random()*32)
 		
 		const boxes = [...(this.props.box)].map((x,i) => {
-			if (i === randBox) {
-				return <div key={i} className="Boxes" style={style1}>{x}</div>
-			}
-	      	return <div key={i} className="Boxes" style={style2}>{x}</div>
+			return (i === randBox) ? <div key={i} className="Boxes" style={style1}>{x}</div> 
+			: <div key={i} className="Boxes" style={style2}>{x}</div>
 	    })
 
 
