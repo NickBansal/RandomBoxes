@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Boxes from './Boxes/Boxes'
 
+const boxes = Array(32)
 
 class App extends Component {
   state = {
@@ -15,16 +16,19 @@ class App extends Component {
     this.setState({
       background: newColor
     })
-  }, 1000 )
+  }, 300 )
   
+  backColor = () => {
+    let random = Math.floor(Math.random()*32);
+    let colors = [...this.props.allColors];
+    return colors[random]
+  }
   
   render() {
 
-    const boxes = Array(32)
-
     return (
       <div className="App">
-        <Boxes box={boxes} boxColor={this.state.background}/>
+        <Boxes box={boxes} boxColor={this.state.background} backColor={this.backColor}/>
       </div>
     );
   }
